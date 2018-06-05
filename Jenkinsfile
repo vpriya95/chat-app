@@ -13,6 +13,7 @@ node {
    }
    stage('docker build/push') {
      docker.withRegistry('https://index.docker.io/v1/', 'dockerhub') {
+        echo "in docker file"
        def app = docker.build("kkarunalladeva/chat-app:${commit_id}", '.').push()
      }
    }
