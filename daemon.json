@@ -1,4 +1,3 @@
 {
-    "insecure-registries": ["104.236.19.92:5000"],
-     "insecure-registries": ["159.65.43.3:5000"]
+    "insecure-registries": ["104.236.19.92:5000"]
 }
