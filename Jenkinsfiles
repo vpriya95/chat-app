@@ -8,6 +8,7 @@ node {
    stage('test') {
      nodejs(nodeJSInstallationName: 'nodeJS 10') {
        sh 'npm install'
+       sh 'npm i mochawesome'
        sh 'npm test'
      }
    }
