@@ -90,6 +90,8 @@
 
     - pip:
        name: docker-py
+    - pip:
+       name: docker
 
     - name: ensure file exists for insecure-registries entery
       copy:
