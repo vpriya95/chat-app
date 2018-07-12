@@ -10,4 +10,4 @@
   # can also be used for pre and post tasks
   tasks:
   - ping:
-  - debug: msg="IP is {{ hostvars['localhost']['dropletoken'] }}"  
+  - debug: msg="IP is {{ do_token }}"  
