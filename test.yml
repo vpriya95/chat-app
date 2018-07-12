@@ -44,9 +44,9 @@
       # ansible_password: root
 
   #- name: Add IP address of all hosts to all hosts
-    #lineinfile:
-     # dest: /etc/ansible/hosts
-     # line: "[new_host] \n {{ hostvars['new_host'].ansible_host }} ansible_user=root"
+   # lineinfile:
+      #dest: /etc/ansible/hosts
+      #line: "[new_host] \n {{ hostvars['new_host'].ansible_host }} ansible_user=root"
      # state: present
     #with_items: "{{ groups.all }}"  
 
@@ -56,6 +56,9 @@
 
   # Target: where our play will run and options it will run with
   hosts: new_host
+  sudo: yes
+  remote_user: root
+  gather_facts: no
 
   # Task: the list of tasks that will be executed within the play, this section
   # can also be used for pre and post tasks
