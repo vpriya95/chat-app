@@ -88,8 +88,8 @@
         state: latest
         install_recommends: yes
 
-    - pip:
-       name: docker-py
+    #- pip:
+       #name: docker-py
     - pip:
        name: docker
 
