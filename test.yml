@@ -106,7 +106,10 @@
         name: "{{ hostvars['localhost']['image'] }}"
         image: "{{ hostvars['localhost']['image'] }}"
         ports:
-          - "3000:3000"  
+          - "3000:3000"
+        state: started  
+        env:
+          PORT: 3000   
 
   # Three dots indicate the end of a YAML document
 ... 
