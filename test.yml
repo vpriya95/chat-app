@@ -40,7 +40,6 @@
       hostname: new_host
       ansible_host: "{{ droplet_one.droplet.ip_address }}"
       ansible_user: root
-      ansible_ssh_extra_args: '-o StrictHostKeyChecking=no'
         # This is reliant on sshpass being installed
       # ansible_password: root
 
