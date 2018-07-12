@@ -43,12 +43,12 @@
         # This is reliant on sshpass being installed
       # ansible_password: root
 
-  - name: Add IP address of all hosts to all hosts
-    lineinfile:
-      dest: hosts
-      line: "[new_host] \n {{ hostvars['new_host'].ansible_host }} ansible_user=root"
-      state: present
-    with_items: "{{ groups.all }}"  
+  #- name: Add IP address of all hosts to all hosts
+   # lineinfile:
+    #  dest: hosts
+     # line: "[new_host] \n {{ hostvars['new_host'].ansible_host }} ansible_user=root"
+     # state: present
+    #with_items: "{{ groups.all }}"  
 
   - debug: msg="IP is {{ droplet_one.droplet.ip_address }}"  
 
