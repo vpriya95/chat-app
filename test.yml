@@ -37,9 +37,9 @@
 
   - name: add a host with a non-standard port local to your machines
     add_host:
-      hostname: new_host
+      hostname: stage_host
       ansible_host: "{{ droplet_one.droplet.ip_address }}"
-      ansible_user: root
+      #ansible_user: root
         # This is reliant on sshpass being installed
       # ansible_password: root
 
@@ -55,8 +55,7 @@
 -
 
   # Target: where our play will run and options it will run with
-  hosts: new_host
-  become: yes
+  hosts: stage_host
   # Task: the list of tasks that will be executed within the play, this section
   # can also be used for pre and post tasks
   tasks:
