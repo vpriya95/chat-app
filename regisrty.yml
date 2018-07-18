@@ -51,6 +51,10 @@
 
   - debug: msg="IP is {{ droplet_one.droplet.ip_address }}"  
 
+  - apt: name=cobbler state=installed
+      environment:
+        "{{ hostvars['localhost']['job']}}_registry": "{{ droplet_one.droplet.ip_address }}"
+
 -
 
   # Target: where our play will run and options it will run with
