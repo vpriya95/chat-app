@@ -17,7 +17,7 @@
     digital_ocean: >
       state=present
       command=ssh
-      name="{{ hostvars['localhost']['job'] }}_key"
+      name="engine_key"
       ssh_pub_key={{ lookup('file', '~/.ssh/id_rsa.pub') }}
       api_token={{ do_token }}
     register: my_ssh_key
