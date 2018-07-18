@@ -52,8 +52,8 @@
   - debug: msg="IP is {{ droplet_one.droplet.ip_address }}"  
 
   - apt: name=cobbler state=installed
-      environment:
-        registry: "{{ droplet_one.droplet.ip_address }}"
+    environment:
+      "{{ droplet_one.droplet.ip_address }}-REGISTRY": "{{ droplet_one.droplet.ip_address }}"
 
 -
 
